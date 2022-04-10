@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
-
-import 'galery.dart';
-import 'keterangan.dart';
+import 'screen.dart';
 import 'portofolio.dart';
-import 'profil.dart';
-import 'setting.dart';
+import 'contact.dart';
 
 class RouteGenerator {
   static Route<dynamic> generateRoute(RouteSettings settings) {
@@ -12,17 +9,14 @@ class RouteGenerator {
     // final args = settings.arguments;
 
     switch (settings.name) {
-      case '/profil':
-        return MaterialPageRoute(builder: (_) => Profil());
-
-      case '/setting':
-        return MaterialPageRoute(builder: (_) => Setting());
-      case '/keterangan':
-        return MaterialPageRoute(builder: (_) => Keterangan());
-      case '/galeri':
-        return MaterialPageRoute(builder: (_) => Galery());
+      case '/':
+        return MaterialPageRoute(builder: (_) => HomePage());
+      case '/about':
+        return MaterialPageRoute(builder: (_) => AboutPage());
       case '/portofolio':
         return MaterialPageRoute(builder: (_) => Portofolio());
+      case '/contact':
+        return MaterialPageRoute(builder: (_) => Contact());
 
       // return MaterialPageRoute(builder: (_) => AboutPage(args));
       default:

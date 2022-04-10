@@ -4,79 +4,26 @@ class Portofolio extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        flexibleSpace: Container(
-          decoration: BoxDecoration(
-            color: Colors.black,
-          ),
+        appBar: AppBar(
+          title: Text('Portofolio', style: TextStyle(fontWeight: FontWeight.bold)),
         ),
-        title: Text('Portofolio', style: TextStyle(fontWeight: FontWeight.bold)),
-      ),
-      body: GridView.count(
-        crossAxisCount: 1,
-        children: <Widget>[
-          Container(
-            child: Card(
-              elevation: 10.0,
-              child: Column(
-                children: <Widget>[
-                  Image.asset(
-                    "assets/images/Bp1.jpg",
-                    height: 350.0,
-                    width: 350.0,
-                    fit: BoxFit.cover,
-                  ),
-                ],
+        body: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+          Center(
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(400),
+              child: Image.asset(
+                'assets/images/jennie.jpg',
+                width: 300,
+                height: 300,
               ),
             ),
           ),
-          Container(
-            child: Card(
-              elevation: 10.0,
-              child: Column(
-                children: <Widget>[
-                  Image.asset(
-                    "assets/images/Bp2.jpg",
-                    height: 350.0,
-                    width: 350.0,
-                    fit: BoxFit.cover,
-                  ),
-                ],
-              ),
-            ),
-          ),
-          Container(
-            child: Card(
-              elevation: 10.0,
-              child: Column(
-                children: <Widget>[
-                  Image.asset(
-                    "assets/images/Bp3.jpg",
-                    height: 350.0,
-                    width: 350.0,
-                    fit: BoxFit.cover,
-                  ),
-                ],
-              ),
-            ),
-          ),
-          Container(
-            child: Card(
-              elevation: 10.0,
-              child: Column(
-                children: <Widget>[
-                  Image.asset(
-                    "assets/images/Bp4.jpg",
-                    height: 350.0,
-                    width: 350.0,
-                    fit: BoxFit.cover,
-                  ),
-                ],
-              ),
-            ),
-          ),
-        ],
-      ),
-    );
+          SizedBox(height: 20),
+          Center(
+              child: Text(
+            "Aldi Rizky Gunawan",
+            style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+          ))
+        ]));
   }
 }
